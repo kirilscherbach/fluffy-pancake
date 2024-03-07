@@ -1,0 +1,14 @@
+- name: KellerPi setup
+  hosts: myhosts
+  tasks:
+    - name: Ping my hosts
+      ansible.builtin.ping:
+
+    - name: Print message
+      ansible.builtin.debug:
+        msg: Hello world
+
+  roles:
+    - role: geerlingguy.docker
+      become: yes
+      tags: docker
